@@ -1,4 +1,0 @@
-[2018-07-07 19:37:16,798] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating inbound request  
-[2018-07-07 19:38:02,564] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating inbound request  
-[2018-07-07 19:39:16,881] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Idle timeout triggered before initiating outbound response  
-[2018-07-07 19:40:02,640] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Idle timeout triggered before initiating outbound response  
