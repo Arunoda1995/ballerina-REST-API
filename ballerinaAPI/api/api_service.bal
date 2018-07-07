@@ -115,6 +115,27 @@ service<http:Service> CholesterolData bind listener{
         _=httpConnection->respond(response);
 
     }
+
+
+    @http:ResourceConfig {
+        methods: ["DELETE"],
+        path: "/cholesterol/{cholesterolId}"
+    }
+    deleteCholesterolData(endpoint httpConnection,http:Request request, string cholesterolId)
+    {
+        http:Response response;
+
+        int choId = check <int> cholesterolId;
+
+        var cholesterolData = deleteCholData(choId);
+
+        response.setJsonPayload(cholesterolData);
+        _=httpConnection->respond(response);
+
+    }
+
+
+
 }
 
 
@@ -184,6 +205,30 @@ public function updateCholData(string gender,int age,int totalCholesterol, int n
     return data;
 
 }
+
+public function deleteCholData(int cholesterolId) returns(json)
+{
+    json data;
+
+    string sqlQuery = "DELETE FROM CHOLESTEROL WHERE CholesterolId = ?";
+
+    var result = cholesterolDB->update(sqlQuery,cholesterolId);
+
+    match result {
+
+        int updateRowCount =>{
+            data  = {"Status":"Data Deleted Successfully"};
+        }
+
+        error err =>{
+            data  = {"Status":"Data Not Deleted","Error":err.message};
+        }
+    }
+
+    return data;
+
+}
+
 
 
 
