@@ -33,18 +33,18 @@ endpoint mysql:Client cholesterolDB {
 endpoint http:Listener listener {
     port: 9090
 };
+
 @http:ServiceConfig{
     basePath:"/developer"
 }
 service<http:Service> CholesterolData bind listener{
+
     @http:ResourceConfig {
         methods: ["POST"],
-        path: "/cholesterol"
+        path: "/cholesterol/"
     }
     addCholesterolData(endpoint httpConnection,http:Request request)
     {
-
-
         http:Response response;
         Cholesterol cholesterolData;
 
@@ -68,17 +68,63 @@ service<http:Service> CholesterolData bind listener{
         _=httpConnection->respond(response);
     }
 
+    @http:ResourceConfig {
+        methods: ["GET"],
+        path: "/cholesterol/{cholesterolId}"
+    }
+    retriveCholesterolData(endpoint httpConnection,http:Request request, string cholesterolId)
+    {
+        http:Response response;
+
+        int choId = check <int> cholesterolId;
+
+        var cholesterolData = getCholesterolData(choId);
+
+        response.setJsonPayload(cholesterolData);
+        _=httpConnection->respond(response);
+
+    }
+
+    @http:ResourceConfig {
+        methods: ["PUT"],
+        path: "/cholesterol/"
+    }
+    updateCholesterolData(endpoint httpConnection,http:Request request)
+    {
+        http:Response response;
+        Cholesterol cholesterolData;
+
+        var payLoadJson = check request.getJsonPayload();
+        cholesterolData = check <Cholesterol>payLoadJson;
+
+        if(cholesterolData.gender == "" || cholesterolData.age == 0 || cholesterolData.totalCholesterol ==0 || cholesterolData.non_hd ==0 ||
+            cholesterolData.ldl == 0 || cholesterolData.hdl == 0 || cholesterolData.cholesterolId == 0
+        )
+        {
+
+            response.setTextPayload("Error");
+            response.statusCode = 400;
+            _ = httpConnection->respond(response);
+            done;
+
+        }
+
+        json result = updateCholData(cholesterolData.gender,cholesterolData.age,cholesterolData.totalCholesterol,cholesterolData.non_hd,cholesterolData.ldl,cholesterolData.hdl,cholesterolData.cholesterolId);
+        response.setJsonPayload(result);
+        _=httpConnection->respond(response);
+
+    }
 }
 
 
-public function insertCholesterolData(string gender,int age,int totalCholesterol, int non_hd,int ldl,int hdl, int id)
+public function insertCholesterolData(string gender,int age,int totalCholesterol, int non_hd,int ldl,int hdl, int id) returns(json)
 {
 
     json data;
 
-    string sqlQuery = "INSERT INTO CHOLESTEROL(id,age,gender,totalCholesterol,non-hd,ldl,hdl) VALUES(?,?,?,?,?,?,?)";
+    string sqlQuery = "INSERT INTO CHOLESTEROL(age,gender,totalCholesterol,non_hd,ldl,hdl,cholesterolId) VALUES(?,?,?,?,?,?,?)";
 
-    var ret = cholesterolDB->update(sqlQuery,id,age,gender,totalCholesterol,non_hd,ldl,hdl);
+    var ret = cholesterolDB->update(sqlQuery,age,gender,totalCholesterol,non_hd,ldl,hdl,id);
 
     match ret {
         int updateRowCount => {
@@ -93,21 +139,57 @@ public function insertCholesterolData(string gender,int age,int totalCholesterol
 
 }
 
+public function getCholesterolData(int cholesterolId) returns(json)
+{
+    json data;
 
-@http:ServiceConfig{
-    basePath:"/user"
-}
-service<http:Service> userData bind listener{
-    @http:ResourceConfig{
-        methods: ["GET"],
-        path:"/cholesterol"
-    }
-    getCholesterolData(endpoint client,http:Request req)
-    {
-        log:printInfo("user/cholesterol/GET");
+    string sqlQuery = "SELECT * FROM CHOLESTEROL WHERE CholesterolId = ?";
+
+    var result = cholesterolDB->select(sqlQuery,(),cholesterolId);
+
+    match result {
+
+        table dataTable =>{
+            data  = check <json>dataTable;
+        }
+
+        error err =>{
+            data  = {"Status":"Data Not Found","Error":err.message};
+        }
     }
 
+    return data;
+
 }
+
+public function updateCholData(string gender,int age,int totalCholesterol, int non_hd,int ldl,int hdl, int id) returns(json)
+{
+
+    json data;
+
+    string sqlQuery = "UPDATE CHOLESTEROL SET age = ?,gender=?,totalCholesterol=?,non_hd=?,ldl=?,hdl=? WHERE cholesterolId = ?";
+
+    var ret = cholesterolDB->update(sqlQuery,age,gender,totalCholesterol,non_hd,ldl,hdl,id);
+
+    match ret {
+        int updateRowCount => {
+            data = {"Status":"Data Update Successfully"};
+        }
+        error err=>{
+            data = {"Status": "Data Not Updated","Error": err.message};
+        }
+    }
+
+    return data;
+
+}
+
+
+
+
+
+
+
 
 
 
