@@ -12,8 +12,9 @@ type Cholesterol {
     int totalCholesterol;
     int non_hd;
     int ldl;
-    int hdl;
     int cholesterolId;
+    int hdl;
+    
 
 };
 
