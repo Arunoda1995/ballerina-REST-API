@@ -1,7 +1,8 @@
 import ballerina/io;
+import ballerina/http;
 
 endpoint http:Client clientEndpoint {
-    url:"http://localhost:9090"
+    url: "http://localhost:9090"
 };
 
 
@@ -36,7 +37,46 @@ function main(string... args) {
 
 function  callUser ()   {
 
-    var userResponse = clientEndpoint->get("/user/cholesterol");
+    http:Request req = new;
+
+    string email = io:readln("Enter Your Email Address : ");
+    int age  = check <int>io:readln("Enter Your Age : ");
+    string gender = io:readln("Enter Your Gender : ");
+    int totChol = check <int>io:readln("Enter Your Total Cholesterol Level : ");
+    int non_hd  = check <int>io:readln("Enter Your Non Hd Cholesterol Level : ");
+    int ldl  = check <int>io:readln("Enter Your LDL Cholertorl Level : ");
+    int hdl = check <int>io:readln("Enter Your HDL Cholesterol Level : ");
+
+
+
+    json jsonMessage = {
+
+        age:age,
+        email:email,
+        gender:gender,
+        totalCholesterol:totChol,
+        non_hd:non_hd,
+        ldl:ldl,
+        hdl:hdl
+
+    };
+
+    req.setJsonPayload(jsonMessage);
+
+
+    var response = clientEndpoint->post("/user/cholesterol",req);
+
+    match response {
+
+        http:Response resp=>{
+
+            }
+
+        error err =>{
+
+        }
+    }
+
 
 }
 

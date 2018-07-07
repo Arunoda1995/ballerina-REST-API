@@ -115,3 +115,7 @@ java.net.BindException: Address already in use
 [2018-07-08 01:40:22,013] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating inbound request  
 [2018-07-08 01:54:13,358] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating inbound request  
 [2018-07-08 01:55:08,784] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating inbound request  
+[2018-07-08 03:22:05,403] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-08 03:22:05,421] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection bb8de1da  
+[2018-07-08 04:08:17,628] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-08 04:08:17,647] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection 9a55b678  

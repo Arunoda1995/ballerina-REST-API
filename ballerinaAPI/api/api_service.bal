@@ -230,8 +230,34 @@ public function deleteCholData(int cholesterolId) returns(json)
 }
 
 
+@http:ServiceConfig{
+    basePath:"/user"
+}
+service<http:Service> userCholesterolData bind listener{
 
 
+    @http:ResourceConfig {
+        methods: ["POST"],
+        path: "/cholesterol"
+    }
+    retriveCholesterolData(endpoint httpConnection,http:Request req)
+    {
+
+        json messageRequest = check req.getJsonPayload();
+
+        string email = messageRequest.email.toString();
+        int age = check <int> messageRequest.age.toString();
+        string gender = check req.gender.toString();
+        int totalCholesterol = check <int> messageRequest.totalCholesterol.toString();
+        int non_hd = check <int> messageRequest.non_hd.toString();
+        int ldl = check <int> messageRequest.ldl.toString();
+        int hdl =  check <int> messageRequest.hdl.toString();
+
+    
+    }
+
+
+}
 
 
 
