@@ -119,3 +119,64 @@ java.net.BindException: Address already in use
 [2018-07-08 03:22:05,421] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection bb8de1da  
 [2018-07-08 04:08:17,628] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
 [2018-07-08 04:08:17,647] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection 9a55b678  
+[2018-07-08 13:17:03,900] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-08 13:17:03,920] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection b3c81fa0  
+[2018-07-08 13:30:55,663] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-08 13:30:55,677] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection 42519833  
+[2018-07-08 13:36:31,036] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-08 13:36:31,052] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection 359e4694  
+[2018-07-08 13:52:01,505] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-08 13:52:01,526] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection 3055648e  
+[2018-07-08 13:53:29,517] ERROR {org.ballerinalang.net.http.HttpUtil} - call failed  
+[2018-07-08 16:06:54,957] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-08 16:06:54,974] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection bbd9e2c9  
+[2018-07-08 16:12:57,840] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-08 16:12:57,856] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection a96acc8e  
+[2018-07-08 18:24:32,200] ERROR {org.ballerinalang.launcher.Main} - null 
+java.util.EmptyStackException
+	at java.util.Stack.peek(Stack.java:102)
+	at java.util.Stack.pop(Stack.java:84)
+	at org.wso2.ballerinalang.compiler.parser.BLangPackageBuilder.createBinaryExpr(BLangPackageBuilder.java:1067)
+	at org.wso2.ballerinalang.compiler.parser.BLangParserListener.exitBinaryCompareExpression(BLangParserListener.java:1901)
+	at org.wso2.ballerinalang.compiler.parser.antlr4.BallerinaParser$BinaryCompareExpressionContext.exitRule(BallerinaParser.java:9266)
+	at org.antlr.v4.runtime.Parser.triggerExitRuleEvent(Parser.java:430)
+	at org.antlr.v4.runtime.Parser.exitRule(Parser.java:646)
+	at org.wso2.ballerinalang.compiler.parser.antlr4.BallerinaParser.compilationUnit(BallerinaParser.java:453)
+	at org.wso2.ballerinalang.compiler.parser.Parser.generateCompilationUnit(Parser.java:109)
+	at org.wso2.ballerinalang.compiler.parser.Parser.lambda$parse$131(Parser.java:84)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.wso2.ballerinalang.compiler.parser.Parser.parse(Parser.java:84)
+	at org.wso2.ballerinalang.compiler.PackageLoader.parse(PackageLoader.java:401)
+	at org.wso2.ballerinalang.compiler.PackageLoader.loadEntryPackage(PackageLoader.java:270)
+	at org.wso2.ballerinalang.compiler.Compiler.lambda$compilePackages$332(Compiler.java:132)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.stream.Streams$StreamBuilderImpl.forEachRemaining(Streams.java:419)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.wso2.ballerinalang.compiler.Compiler.compilePackages(Compiler.java:133)
+	at org.wso2.ballerinalang.compiler.Compiler.compilePackage(Compiler.java:155)
+	at org.wso2.ballerinalang.compiler.Compiler.compile(Compiler.java:79)
+	at org.ballerinalang.launcher.LauncherUtils.compile(LauncherUtils.java:257)
+	at org.ballerinalang.launcher.LauncherUtils.runProgram(LauncherUtils.java:93)
+	at org.ballerinalang.launcher.Main$RunCmd.execute(Main.java:256)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.ballerinalang.launcher.Main.main(Main.java:66)
+ 
+[2018-07-08 18:28:23,689] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-08 18:28:23,706] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection 4b106aa3  
+[2018-07-08 23:59:24,856] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-08 23:59:24,874] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection 93a830b8  
+[2018-07-09 00:03:51,950] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-09 00:03:51,964] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection bdde7467  
+[2018-07-09 00:09:14,559] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-09 00:09:14,574] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection 59127ef4  
+[2018-07-09 00:17:19,464] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-09 00:17:19,480] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection 69102d61  
+[2018-07-09 00:33:36,323] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-09 00:33:36,341] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection 748707f6  
+[2018-07-09 00:36:40,682] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed connection before initiating outbound response  
+[2018-07-09 00:36:40,694] WARN  {org.wso2.transport.http.netty.sender.TargetHandler} - Idle timeout has reached hence closing the connection 4ba4ed60  

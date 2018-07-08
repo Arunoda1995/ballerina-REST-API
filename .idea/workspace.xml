@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eda5ab57-1374-485b-a5d8-f613adf9477e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ballerina.conf" beforeDir="false" afterPath="$PROJECT_DIR$/ballerina.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ballerinaAPI/api/api_service.bal" beforeDir="false" afterPath="$PROJECT_DIR$/ballerinaAPI/api/api_service.bal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ballerinaAPI/api/client.bal" beforeDir="false" afterPath="$PROJECT_DIR$/ballerinaAPI/api/client.bal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ballerinaAPI/ballerina-internal.log" beforeDir="false" afterPath="$PROJECT_DIR$/ballerinaAPI/ballerina-internal.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ballerinaAPI/ballerina-internal.log.lck" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,21 +17,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="api_service.bal" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="api_service.bal" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ballerinaAPI/api/api_service.bal">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="255" column="4" lean-forward="true" selection-start-line="255" selection-start-column="4" selection-end-line="255" selection-end-column="4" />
+            <state relative-caret-position="-832">
+              <caret line="292" column="32" selection-start-line="292" selection-start-column="32" selection-end-line="292" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.bal" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ballerina.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ballerina.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client.bal" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ballerinaAPI/api/client.bal">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="53" column="7" lean-forward="true" selection-start-line="53" selection-start-column="7" selection-end-line="59" selection-end-column="15" />
+            <state relative-caret-position="532">
+              <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -52,17 +64,17 @@
         <option value="$PROJECT_DIR$/ballerinaAPI/client.bal" />
         <option value="$PROJECT_DIR$/ballerinaAPI/Cholesterol.bal" />
         <option value="$PROJECT_DIR$/ballerinaAPI/api_service.bal" />
-        <option value="$PROJECT_DIR$/ballerina.conf" />
         <option value="$PROJECT_DIR$/ballerinaAPI/Client/client.bal" />
-        <option value="$PROJECT_DIR$/ballerinaAPI/api/client.bal" />
+        <option value="$PROJECT_DIR$/ballerina.conf" />
         <option value="$PROJECT_DIR$/ballerinaAPI/api/api_service.bal" />
+        <option value="$PROJECT_DIR$/ballerinaAPI/api/client.bal" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="925" />
+    <option name="x" value="921" />
     <option name="y" value="24" />
-    <option name="width" value="995" />
+    <option name="width" value="999" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -73,6 +85,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -95,14 +108,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Empty file" value="Ballerina Main" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../data-backed-service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sendGMail" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -179,35 +191,35 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="925" y="24" width="995" height="1056" extended-state="4" />
+    <frame x="921" y="24" width="999" height="1056" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.34486488" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918434" visible="true" weight="0.23919916" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32972974" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.26378378" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918434" weight="0.24344176" />
       <window_info id="Structure" order="1" sideWeight="0.5008157" side_tool="true" weight="0.23940678" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32972974" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -221,46 +233,59 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ballerinaAPI/api/api_service.bal">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ballerinaAPI/api_user.bal">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ballerinaAPI/Cholesterol.bal">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ballerinaAPI/Client/client.bal">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ballerina.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="4155">
+          <caret line="277" column="25" lean-forward="true" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ballerinaAPI/api/client.bal">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="795">
+          <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="59" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ballerinaAPI/api/api_service.bal">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ballerinaAPI/api/client.bal">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
           <caret line="53" column="7" lean-forward="true" selection-start-line="53" selection-start-column="7" selection-end-line="59" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ballerinaAPI/api/api_service.bal">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="255" column="4" lean-forward="true" selection-start-line="255" selection-start-column="4" selection-end-line="255" selection-end-column="4" />
+        <state relative-caret-position="15">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ballerinaAPI/api_user.bal" />
+    <entry file="file://$PROJECT_DIR$/ballerinaAPI/Cholesterol.bal" />
+    <entry file="file://$PROJECT_DIR$/ballerinaAPI/api/api_service.bal">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-832">
+          <caret line="292" column="32" selection-start-line="292" selection-start-column="32" selection-end-line="292" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ballerina.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ballerinaAPI/api/client.bal">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
         </state>
       </provider>
     </entry>
